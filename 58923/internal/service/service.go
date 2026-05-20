@@ -8,37 +8,40 @@ import (
 )
 
 type TaskService struct {
-	store      *store.TaskStore
+	store      store.Store
 	scheduler  *scheduler.Scheduler
 	workerPool *worker.WorkerPool
 }
 
-func NewTaskService(store *store.TaskStore, scheduler *scheduler.Scheduler, workerPool *worker.WorkerPool) *TaskService {
+func NewTaskService(st store.Store, scheduler *scheduler.Scheduler, workerPool *worker.WorkerPool) *TaskService {
 	return &TaskService{
-		store:      store,
+		store:      st,
 		scheduler:  scheduler,
 		workerPool: workerPool,
 	}
 }
 
 type AddDelayTaskRequest struct {
-	Name     string            `json:"name"`
-	Payload  map[string]string `json:"payload"`
-	DelayMs  int64             `json:"delay_ms"`
-	MaxRetry int               `json:"max_retry"`
+	Name      string            `json:"name"`
+	Payload   map[string]string `json:"payload"`
+	DelayMs   int64             `json:"delay_ms"`
+	MaxRetry  int               `json:"max_retry"`
+	DependsOn []string          `json:"depends_on,omitempty"`
 }
 
 type AddCronTaskRequest struct {
-	Name     string            `json:"name"`
-	Payload  map[string]string `json:"payload"`
-	CronExpr string            `json:"cron_expr"`
-	MaxRetry int               `json:"max_retry"`
+	Name      string            `json:"name"`
+	Payload   map[string]string `json:"payload"`
+	CronExpr  string            `json:"cron_expr"`
+	MaxRetry  int               `json:"max_retry"`
+	DependsOn []string          `json:"depends_on,omitempty"`
 }
 
 type AddOneTimeTaskRequest struct {
-	Name     string            `json:"name"`
-	Payload  map[string]string `json:"payload"`
-	MaxRetry int               `json:"max_retry"`
+	Name      string            `json:"name"`
+	Payload   map[string]string `json:"payload"`
+	MaxRetry  int               `json:"max_retry"`
+	DependsOn []string          `json:"depends_on,omitempty"`
 }
 
 type TaskResponse struct {
@@ -62,12 +65,12 @@ type SetWorkerCountRequest struct {
 }
 
 func (s *TaskService) AddDelayTask(req *AddDelayTaskRequest) (*models.Task, error) {
-	task := s.scheduler.AddDelayTask(req.Name, req.Payload, req.DelayMs, req.MaxRetry)
+	task := s.scheduler.AddDelayTaskWithDeps(req.Name, req.Payload, req.DelayMs, req.MaxRetry, req.DependsOn)
 	return task, nil
 }
 
 func (s *TaskService) AddCronTask(req *AddCronTaskRequest) (*models.Task, error) {
-	task, err := s.scheduler.AddCronTask(req.Name, req.Payload, req.CronExpr, req.MaxRetry)
+	task, err := s.scheduler.AddCronTaskWithDeps(req.Name, req.Payload, req.CronExpr, req.MaxRetry, req.DependsOn)
 	if err != nil {
 		return nil, err
 	}
@@ -75,7 +78,7 @@ func (s *TaskService) AddCronTask(req *AddCronTaskRequest) (*models.Task, error)
 }
 
 func (s *TaskService) AddOneTimeTask(req *AddOneTimeTaskRequest) (*models.Task, error) {
-	task := s.scheduler.AddOneTimeTask(req.Name, req.Payload, req.MaxRetry)
+	task := s.scheduler.AddOneTimeTaskWithDeps(req.Name, req.Payload, req.MaxRetry, req.DependsOn)
 	return task, nil
 }
 

@@ -16,10 +16,29 @@ import (
 )
 
 func main() {
-	taskStore := store.NewTaskStore()
-	workerPool := worker.NewWorkerPool(taskStore, worker.DefaultExecutor, 5)
-	taskScheduler := scheduler.NewScheduler(taskStore, workerPool)
-	taskService := service.NewTaskService(taskStore, taskScheduler, workerPool)
+	dbPath := "./tasks.db"
+	sqliteStore, err := store.NewSQLiteStore(dbPath)
+	if err != nil {
+		log.Fatalf("Failed to open SQLite store: %v", err)
+	}
+	defer sqliteStore.Close()
+
+	log.Printf("Using SQLite store at %s", dbPath)
+
+	if err := sqliteStore.RecoverTasks(); err != nil {
+		log.Printf("Warning: failed to recover tasks: %v", err)
+	}
+
+	workerPool := worker.NewWorkerPool(sqliteStore, worker.DefaultExecutor, 5)
+	taskScheduler := scheduler.NewScheduler(sqliteStore, workerPool)
+
+	workerPool.OnTaskComplete = func(taskID string) {
+		taskScheduler.NotifyTaskComplete(taskID)
+	}
+
+	taskScheduler.RecoverCronJobs()
+
+	taskService := service.NewTaskService(sqliteStore, taskScheduler, workerPool)
 
 	httpAddr := ":8080"
 	grpcAddr := ":50051"
@@ -38,10 +57,14 @@ func main() {
 	fmt.Println("=== Task Scheduler Service Started ===")
 	fmt.Println("HTTP API: http://localhost:8080/api/v1/")
 	fmt.Println("gRPC API: localhost:50051")
+	fmt.Println("SQLite: tasks.db")
 	fmt.Println("")
 	fmt.Println("Example HTTP calls:")
 	fmt.Println("  # Add delay task (2 seconds)")
-	fmt.Println("  curl -X POST http://localhost:8080/api/v1/tasks/delay -H 'Content-Type: application/json' -d '{\"name\":\"test\",\"payload\":{\"key\":\"value\"},\"delay_ms\":2000,\"max_retry\":3}'")
+	fmt.Println(`  curl -X POST http://localhost:8080/api/v1/tasks/delay -H 'Content-Type: application/json' -d '{"name":"test","payload":{"key":"value"},"delay_ms":2000,"max_retry":3}'`)
+	fmt.Println("")
+	fmt.Println("  # Add task with dependencies")
+	fmt.Println(`  curl -X POST http://localhost:8080/api/v1/tasks/onetime -H 'Content-Type: application/json' -d '{"name":"dependent-task","depends_on":["task-id-1","task-id-2"],"max_retry":3}'`)
 	fmt.Println("")
 	fmt.Println("  # Add cron task (every 5 seconds)")
 	fmt.Println(`  curl -X POST http://localhost:8080/api/v1/tasks/cron -H 'Content-Type: application/json' -d '{"name":"cron-test","payload":{"foo":"bar"},"cron_expr":"*/5 * * * * *","max_retry":3}'`)

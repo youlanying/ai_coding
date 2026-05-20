@@ -1,0 +1,2040 @@
+{
+ "90_spilt_not_trigger_free_weight": {
+  "array_value": [
+   50,
+   100
+  ],
+  "int_value": 0,
+  "name": "90_spilt_not_trigger_free_weight",
+  "string_value": ""
+ },
+ "90_spilt_weight": {
+  "array_value": [
+   [
+    3,
+    30
+   ],
+   [
+    4,
+    100
+   ],
+   [
+    5,
+    50
+   ],
+   [
+    6,
+    12
+   ]
+  ],
+  "int_value": 0,
+  "name": "90_spilt_weight",
+  "string_value": ""
+ },
+ "94_change_to_95_hit_rate": {
+  "array_value": [
+   [
+    14,
+    [
+     4000,
+     10000
+    ]
+   ],
+   [
+    13,
+    [
+     5500,
+     10000
+    ]
+   ],
+   [
+    12,
+    [
+     5500,
+     10000
+    ]
+   ],
+   [
+    11,
+    [
+     5500,
+     10000
+    ]
+   ],
+   [
+    10,
+    [
+     5000,
+     10000
+    ]
+   ],
+   [
+    9,
+    [
+     4500,
+     10000
+    ]
+   ],
+   [
+    8,
+    [
+     4000,
+     10000
+    ]
+   ],
+   [
+    7,
+    [
+     4000,
+     10000
+    ]
+   ],
+   [
+    6,
+    [
+     4000,
+     10000
+    ]
+   ],
+   [
+    5,
+    [
+     3000,
+     10000
+    ]
+   ],
+   [
+    4,
+    [
+     2000,
+     10000
+    ]
+   ],
+   [
+    3,
+    [
+     1500,
+     10000
+    ]
+   ],
+   [
+    2,
+    [
+     800,
+     10000
+    ]
+   ],
+   [
+    1,
+    [
+     500,
+     10000
+    ]
+   ],
+   [
+    0,
+    [
+     0,
+     10000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "94_change_to_95_hit_rate",
+  "string_value": ""
+ },
+ "94_hit_respin_random_rate": {
+  "array_value": [
+   [
+    0,
+    [
+     0,
+     10000
+    ]
+   ],
+   [
+    1,
+    [
+     5,
+     10000
+    ]
+   ],
+   [
+    2,
+    [
+     55,
+     10000
+    ]
+   ],
+   [
+    3,
+    [
+     190,
+     10000
+    ]
+   ],
+   [
+    4,
+    [
+     300,
+     10000
+    ]
+   ],
+   [
+    5,
+    [
+     700,
+     10000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "94_hit_respin_random_rate",
+  "string_value": ""
+ },
+ "94_spilt_value_part_1_weight_in_base_free": {
+  "array_value": [
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    46
+   ],
+   [
+    4,
+    185
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    6,
+    20
+   ],
+   [
+    7,
+    100
+   ],
+   [
+    8,
+    250
+   ],
+   [
+    9,
+    800
+   ],
+   [
+    10,
+    1200
+   ],
+   [
+    11,
+    1650
+   ],
+   [
+    12,
+    1900
+   ],
+   [
+    13,
+    1880
+   ]
+  ],
+  "int_value": 0,
+  "name": "94_spilt_value_part_1_weight_in_base_free",
+  "string_value": ""
+ },
+ "94_spilt_value_part_2_weight_in_base_free": {
+  "array_value": [
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    4,
+    25
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    7,
+    80
+   ],
+   [
+    8,
+    100
+   ],
+   [
+    9,
+    250
+   ],
+   [
+    10,
+    300
+   ],
+   [
+    11,
+    100
+   ],
+   [
+    12,
+    0
+   ],
+   [
+    13,
+    0
+   ],
+   [
+    1000,
+    2
+   ],
+   [
+    800,
+    5
+   ],
+   [
+    700,
+    15
+   ],
+   [
+    500,
+    150
+   ],
+   [
+    300,
+    350
+   ],
+   [
+    200,
+    700
+   ]
+  ],
+  "int_value": 0,
+  "name": "94_spilt_value_part_2_weight_in_base_free",
+  "string_value": ""
+ },
+ "94_split_weight_in_base": {
+  "array_value": [
+   2000,
+   10000
+  ],
+  "int_value": 0,
+  "name": "94_split_weight_in_base",
+  "string_value": ""
+ },
+ "94_value_in_respin_weight": {
+  "array_value": [
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    20
+   ],
+   [
+    4,
+    55
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    7,
+    40
+   ],
+   [
+    8,
+    135
+   ],
+   [
+    9,
+    250
+   ],
+   [
+    10,
+    330
+   ],
+   [
+    11,
+    350
+   ],
+   [
+    12,
+    750
+   ],
+   [
+    13,
+    900
+   ],
+   [
+    1000,
+    0
+   ],
+   [
+    800,
+    0
+   ],
+   [
+    700,
+    0
+   ],
+   [
+    500,
+    0
+   ],
+   [
+    300,
+    0
+   ],
+   [
+    200,
+    0
+   ]
+  ],
+  "int_value": 0,
+  "name": "94_value_in_respin_weight",
+  "string_value": ""
+ },
+ "95_split_nums_weight": {
+  "array_value": [
+   [
+    5,
+    3
+   ],
+   [
+    4,
+    10
+   ],
+   [
+    3,
+    15
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    1,
+    0
+   ]
+  ],
+  "int_value": 0,
+  "name": "95_split_nums_weight",
+  "string_value": ""
+ },
+ "base_split_symbol_0_weight": {
+  "array_value": [
+   [
+    1,
+    [
+     2000,
+     10000
+    ]
+   ],
+   [
+    2,
+    [
+     6000,
+     10000
+    ]
+   ],
+   [
+    3,
+    [
+     8000,
+     10000
+    ]
+   ],
+   [
+    4,
+    [
+     8500,
+     10000
+    ]
+   ],
+   [
+    5,
+    [
+     9000,
+     10000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "base_split_symbol_0_weight",
+  "string_value": ""
+ },
+ "base_split_symbol_1_weight": {
+  "array_value": [
+   [
+    1,
+    [
+     2000,
+     10000
+    ]
+   ],
+   [
+    2,
+    [
+     6000,
+     10000
+    ]
+   ],
+   [
+    3,
+    [
+     7000,
+     10000
+    ]
+   ],
+   [
+    4,
+    [
+     8500,
+     10000
+    ]
+   ],
+   [
+    5,
+    [
+     9000,
+     10000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "base_split_symbol_1_weight",
+  "string_value": ""
+ },
+ "base_split_symbol_2_weight": {
+  "array_value": [
+   [
+    1,
+    [
+     1000,
+     10000
+    ]
+   ],
+   [
+    2,
+    [
+     2200,
+     10000
+    ]
+   ],
+   [
+    3,
+    [
+     4500,
+     10000
+    ]
+   ],
+   [
+    4,
+    [
+     7500,
+     10000
+    ]
+   ],
+   [
+    5,
+    [
+     8500,
+     10000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "base_split_symbol_2_weight",
+  "string_value": ""
+ },
+ "base_split_symbol_3_weight": {
+  "array_value": [
+   [
+    1,
+    [
+     1000,
+     10000
+    ]
+   ],
+   [
+    2,
+    [
+     2200,
+     10000
+    ]
+   ],
+   [
+    3,
+    [
+     4500,
+     10000
+    ]
+   ],
+   [
+    4,
+    [
+     7500,
+     10000
+    ]
+   ],
+   [
+    5,
+    [
+     8500,
+     10000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "base_split_symbol_3_weight",
+  "string_value": ""
+ },
+ "base_split_symbol_4_weight": {
+  "array_value": [
+   [
+    1,
+    [
+     1000,
+     10000
+    ]
+   ],
+   [
+    2,
+    [
+     2200,
+     10000
+    ]
+   ],
+   [
+    3,
+    [
+     4500,
+     10000
+    ]
+   ],
+   [
+    4,
+    [
+     7500,
+     10000
+    ]
+   ],
+   [
+    5,
+    [
+     8500,
+     10000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "base_split_symbol_4_weight",
+  "string_value": ""
+ },
+ "base_split_symbol_92_weight": {
+  "array_value": [
+   [
+    1,
+    [
+     500,
+     10000
+    ]
+   ],
+   [
+    2,
+    [
+     800,
+     10000
+    ]
+   ],
+   [
+    3,
+    [
+     3500,
+     10000
+    ]
+   ],
+   [
+    4,
+    [
+     5000,
+     10000
+    ]
+   ],
+   [
+    5,
+    [
+     6500,
+     10000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "base_split_symbol_92_weight",
+  "string_value": ""
+ },
+ "base_strip_weights": {
+  "array_value": [
+   [
+    1,
+    10000
+   ]
+  ],
+  "int_value": 0,
+  "name": "base_strip_weights",
+  "string_value": ""
+ },
+ "base_triggers": {
+  "array_value": [
+   "line",
+   "free",
+   "re_spin"
+  ],
+  "int_value": 0,
+  "name": "base_triggers",
+  "string_value": ""
+ },
+ "bet": {
+  "array_value": [],
+  "int_value": 100,
+  "name": "bet",
+  "string_value": ""
+ },
+ "bonus": {
+  "array_value": [
+   94
+  ],
+  "int_value": 0,
+  "name": "bonus",
+  "string_value": ""
+ },
+ "bonus2": {
+  "array_value": [
+   95
+  ],
+  "int_value": 0,
+  "name": "bonus2",
+  "string_value": ""
+ },
+ "col": {
+  "array_value": [],
+  "int_value": 5,
+  "name": "col",
+  "string_value": ""
+ },
+ "free_strip_weights": {
+  "array_value": [
+   [
+    1,
+    10000
+   ]
+  ],
+  "int_value": 0,
+  "name": "free_strip_weights",
+  "string_value": ""
+ },
+ "free_triggers": {
+  "array_value": [
+   "line",
+   "re_spin"
+  ],
+  "int_value": 0,
+  "name": "free_triggers",
+  "string_value": ""
+ },
+ "jackpots": {
+  "array_value": [
+   111204,
+   111203,
+   111202,
+   111201
+  ],
+  "int_value": 0,
+  "name": "jackpots",
+  "string_value": ""
+ },
+ "line": {
+  "array_value": [],
+  "int_value": 0,
+  "name": "line",
+  "string_value": "3X5_50"
+ },
+ "prize_for_group": {
+  "array_value": [
+   [
+    2,
+    4
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    5,
+    3
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    7,
+    3
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    10,
+    2
+   ],
+   [
+    11,
+    2
+   ],
+   [
+    12,
+    1
+   ],
+   [
+    13,
+    1
+   ],
+   [
+    1000,
+    5
+   ],
+   [
+    800,
+    5
+   ],
+   [
+    700,
+    5
+   ],
+   [
+    500,
+    5
+   ],
+   [
+    300,
+    5
+   ],
+   [
+    200,
+    5
+   ]
+  ],
+  "int_value": 0,
+  "name": "prize_for_group",
+  "string_value": ""
+ },
+ "random_respin_drop_bonus_1": {
+  "array_value": [
+   [
+    1
+   ],
+   1
+  ],
+  "int_value": 0,
+  "name": "random_respin_drop_bonus_1",
+  "string_value": ""
+ },
+ "random_respin_drop_bonus_2": {
+  "array_value": [
+   [
+    [
+     1,
+     1
+    ],
+    1
+   ],
+   [
+    [
+     2
+    ],
+    1
+   ]
+  ],
+  "int_value": 0,
+  "name": "random_respin_drop_bonus_2",
+  "string_value": ""
+ },
+ "random_respin_drop_bonus_2_free": {
+  "array_value": [
+   [
+    2
+   ],
+   1
+  ],
+  "int_value": 0,
+  "name": "random_respin_drop_bonus_2_free",
+  "string_value": ""
+ },
+ "random_respin_drop_bonus_3": {
+  "array_value": [
+   [
+    [
+     1,
+     1,
+     1
+    ],
+    1
+   ],
+   [
+    [
+     1,
+     2
+    ],
+    1
+   ]
+  ],
+  "int_value": 0,
+  "name": "random_respin_drop_bonus_3",
+  "string_value": ""
+ },
+ "random_respin_drop_bonus_4": {
+  "array_value": [
+   [
+    [
+     1,
+     1,
+     1,
+     1
+    ],
+    1
+   ],
+   [
+    [
+     1,
+     1,
+     2
+    ],
+    1
+   ],
+   [
+    [
+     2,
+     2
+    ],
+    1
+   ]
+  ],
+  "int_value": 0,
+  "name": "random_respin_drop_bonus_4",
+  "string_value": ""
+ },
+ "random_respin_drop_bonus_4_free": {
+  "array_value": [
+   [
+    2,
+    2
+   ],
+   1
+  ],
+  "int_value": 0,
+  "name": "random_respin_drop_bonus_4_free",
+  "string_value": ""
+ },
+ "random_respin_drop_bonus_5": {
+  "array_value": [
+   [
+    [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    1
+   ],
+   [
+    [
+     1,
+     1,
+     1,
+     2
+    ],
+    1
+   ],
+   [
+    [
+     1,
+     2,
+     2
+    ],
+    1
+   ]
+  ],
+  "int_value": 0,
+  "name": "random_respin_drop_bonus_5",
+  "string_value": ""
+ },
+ "respin_bonus_hit_rate_spin_1": {
+  "array_value": [
+   [
+    0,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    1,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    2,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    3,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    4,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    5,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    6,
+    [
+     150,
+     1000
+    ]
+   ],
+   [
+    7,
+    [
+     130,
+     1000
+    ]
+   ],
+   [
+    8,
+    [
+     70,
+     1000
+    ]
+   ],
+   [
+    9,
+    [
+     70,
+     1000
+    ]
+   ],
+   [
+    10,
+    [
+     65,
+     1000
+    ]
+   ],
+   [
+    11,
+    [
+     60,
+     1000
+    ]
+   ],
+   [
+    12,
+    [
+     50,
+     1000
+    ]
+   ],
+   [
+    13,
+    [
+     10,
+     1000
+    ]
+   ],
+   [
+    14,
+    [
+     1,
+     1000
+    ]
+   ],
+   [
+    15,
+    [
+     0,
+     1000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "respin_bonus_hit_rate_spin_1",
+  "string_value": ""
+ },
+ "respin_bonus_hit_rate_spin_2": {
+  "array_value": [
+   [
+    0,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    1,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    2,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    3,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    4,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    5,
+    [
+     100,
+     1000
+    ]
+   ],
+   [
+    6,
+    [
+     150,
+     1000
+    ]
+   ],
+   [
+    7,
+    [
+     130,
+     1000
+    ]
+   ],
+   [
+    8,
+    [
+     70,
+     1000
+    ]
+   ],
+   [
+    9,
+    [
+     70,
+     1000
+    ]
+   ],
+   [
+    10,
+    [
+     65,
+     1000
+    ]
+   ],
+   [
+    11,
+    [
+     60,
+     1000
+    ]
+   ],
+   [
+    12,
+    [
+     50,
+     1000
+    ]
+   ],
+   [
+    13,
+    [
+     10,
+     1000
+    ]
+   ],
+   [
+    14,
+    [
+     1,
+     1000
+    ]
+   ],
+   [
+    15,
+    [
+     0,
+     1000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "respin_bonus_hit_rate_spin_2",
+  "string_value": ""
+ },
+ "respin_bonus_hit_rate_spin_3": {
+  "array_value": [
+   [
+    0,
+    [
+     110,
+     1000
+    ]
+   ],
+   [
+    1,
+    [
+     110,
+     1000
+    ]
+   ],
+   [
+    2,
+    [
+     110,
+     1000
+    ]
+   ],
+   [
+    3,
+    [
+     110,
+     1000
+    ]
+   ],
+   [
+    4,
+    [
+     110,
+     1000
+    ]
+   ],
+   [
+    5,
+    [
+     110,
+     1000
+    ]
+   ],
+   [
+    6,
+    [
+     180,
+     1000
+    ]
+   ],
+   [
+    7,
+    [
+     150,
+     1000
+    ]
+   ],
+   [
+    8,
+    [
+     70,
+     1000
+    ]
+   ],
+   [
+    9,
+    [
+     70,
+     1000
+    ]
+   ],
+   [
+    10,
+    [
+     65,
+     1000
+    ]
+   ],
+   [
+    11,
+    [
+     60,
+     1000
+    ]
+   ],
+   [
+    12,
+    [
+     55,
+     1000
+    ]
+   ],
+   [
+    13,
+    [
+     20,
+     1000
+    ]
+   ],
+   [
+    14,
+    [
+     1,
+     1000
+    ]
+   ],
+   [
+    15,
+    [
+     0,
+     1000
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "respin_bonus_hit_rate_spin_3",
+  "string_value": ""
+ },
+ "respin_hit_95_protect": {
+  "array_value": [
+   0,
+   10000
+  ],
+  "int_value": 0,
+  "name": "respin_hit_95_protect",
+  "string_value": ""
+ },
+ "respin_hit_95_protect_num": {
+  "array_value": [],
+  "int_value": 13,
+  "name": "respin_hit_95_protect_num",
+  "string_value": ""
+ },
+ "respin_times": {
+  "array_value": [],
+  "int_value": 3,
+  "name": "respin_times",
+  "string_value": ""
+ },
+ "row": {
+  "array_value": [],
+  "int_value": 3,
+  "name": "row",
+  "string_value": ""
+ },
+ "rule": {
+  "array_value": [],
+  "int_value": 0,
+  "name": "rule",
+  "string_value": ""
+ },
+ "scatter": {
+  "array_value": [
+   90
+  ],
+  "int_value": 0,
+  "name": "scatter",
+  "string_value": ""
+ },
+ "scatter_mul": {
+  "array_value": [
+   [
+    3,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    5,
+    3
+   ],
+   [
+    6,
+    5
+   ]
+  ],
+  "int_value": 0,
+  "name": "scatter_mul",
+  "string_value": ""
+ },
+ "split_bonus_group_1_hit_value_weight": {
+  "array_value": [
+   [
+    2,
+    0
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    4,
+    100
+   ],
+   [
+    5,
+    3
+   ],
+   [
+    6,
+    10
+   ],
+   [
+    7,
+    50
+   ],
+   [
+    8,
+    100
+   ],
+   [
+    9,
+    500
+   ],
+   [
+    10,
+    800
+   ],
+   [
+    11,
+    1000
+   ],
+   [
+    12,
+    500
+   ],
+   [
+    13,
+    100
+   ],
+   [
+    1000,
+    30
+   ],
+   [
+    800,
+    80
+   ],
+   [
+    700,
+    150
+   ],
+   [
+    500,
+    250
+   ],
+   [
+    300,
+    1000
+   ],
+   [
+    200,
+    2000
+   ]
+  ],
+  "int_value": 0,
+  "name": "split_bonus_group_1_hit_value_weight",
+  "string_value": ""
+ },
+ "split_bonus_group_2_hit_value_weight": {
+  "array_value": [
+   [
+    2,
+    0
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    4,
+    10
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    6,
+    5
+   ],
+   [
+    7,
+    10
+   ],
+   [
+    8,
+    50
+   ],
+   [
+    9,
+    80
+   ],
+   [
+    10,
+    100
+   ],
+   [
+    11,
+    150
+   ],
+   [
+    12,
+    0
+   ],
+   [
+    13,
+    0
+   ],
+   [
+    1000,
+    10
+   ],
+   [
+    800,
+    30
+   ],
+   [
+    700,
+    45
+   ],
+   [
+    500,
+    80
+   ],
+   [
+    300,
+    150
+   ],
+   [
+    200,
+    250
+   ]
+  ],
+  "int_value": 0,
+  "name": "split_bonus_group_2_hit_value_weight",
+  "string_value": ""
+ },
+ "split_bonus_group_3_hit_value_weight": {
+  "array_value": [
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    10
+   ],
+   [
+    4,
+    150
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    6,
+    10
+   ],
+   [
+    7,
+    250
+   ],
+   [
+    8,
+    400
+   ],
+   [
+    9,
+    80
+   ],
+   [
+    10,
+    30
+   ],
+   [
+    11,
+    0
+   ],
+   [
+    12,
+    0
+   ],
+   [
+    13,
+    0
+   ],
+   [
+    1000,
+    28
+   ],
+   [
+    800,
+    80
+   ],
+   [
+    700,
+    250
+   ],
+   [
+    500,
+    350
+   ],
+   [
+    300,
+    500
+   ],
+   [
+    200,
+    650
+   ]
+  ],
+  "int_value": 0,
+  "name": "split_bonus_group_3_hit_value_weight",
+  "string_value": ""
+ },
+ "split_bonus_group_4_hit_value_weight": {
+  "array_value": [
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    35
+   ],
+   [
+    4,
+    200
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    6,
+    25
+   ],
+   [
+    7,
+    100
+   ],
+   [
+    8,
+    150
+   ],
+   [
+    9,
+    400
+   ],
+   [
+    10,
+    550
+   ],
+   [
+    11,
+    650
+   ],
+   [
+    12,
+    450
+   ],
+   [
+    13,
+    150
+   ],
+   [
+    1000,
+    38
+   ],
+   [
+    800,
+    300
+   ],
+   [
+    700,
+    450
+   ],
+   [
+    500,
+    1300
+   ],
+   [
+    300,
+    1800
+   ],
+   [
+    200,
+    2000
+   ]
+  ],
+  "int_value": 0,
+  "name": "split_bonus_group_4_hit_value_weight",
+  "string_value": ""
+ },
+ "split_bonus_group_5_hit_value_weight": {
+  "array_value": [
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    35
+   ],
+   [
+    4,
+    150
+   ],
+   [
+    5,
+    25
+   ],
+   [
+    6,
+    80
+   ],
+   [
+    7,
+    450
+   ],
+   [
+    8,
+    1000
+   ],
+   [
+    9,
+    2500
+   ],
+   [
+    10,
+    3500
+   ],
+   [
+    11,
+    1500
+   ],
+   [
+    12,
+    500
+   ],
+   [
+    13,
+    0
+   ],
+   [
+    1000,
+    0
+   ],
+   [
+    800,
+    0
+   ],
+   [
+    700,
+    0
+   ],
+   [
+    500,
+    0
+   ],
+   [
+    300,
+    0
+   ],
+   [
+    200,
+    0
+   ]
+  ],
+  "int_value": 0,
+  "name": "split_bonus_group_5_hit_value_weight",
+  "string_value": ""
+ },
+ "split_bonus_group_hit_rate": {
+  "array_value": [
+   [
+    1,
+    [
+     13.5,
+     100
+    ]
+   ],
+   [
+    2,
+    [
+     14,
+     100
+    ]
+   ],
+   [
+    3,
+    [
+     11,
+     100
+    ]
+   ],
+   [
+    4,
+    [
+     10,
+     100
+    ]
+   ],
+   [
+    5,
+    [
+     10,
+     100
+    ]
+   ]
+  ],
+  "int_value": 0,
+  "name": "split_bonus_group_hit_rate",
+  "string_value": ""
+ },
+ "split_value_weight": {
+  "array_value": [
+   [
+    2,
+    0
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    4,
+    0
+   ],
+   [
+    5,
+    0
+   ],
+   [
+    6,
+    0
+   ],
+   [
+    7,
+    0
+   ],
+   [
+    8,
+    0
+   ],
+   [
+    9,
+    0
+   ],
+   [
+    10,
+    0
+   ],
+   [
+    11,
+    0
+   ],
+   [
+    12,
+    0
+   ],
+   [
+    13,
+    0
+   ],
+   [
+    1000,
+    15
+   ],
+   [
+    800,
+    50
+   ],
+   [
+    700,
+    150
+   ],
+   [
+    500,
+    300
+   ],
+   [
+    300,
+    350
+   ],
+   [
+    200,
+    300
+   ]
+  ],
+  "int_value": 0,
+  "name": "split_value_weight",
+  "string_value": ""
+ },
+ "symbols": {
+  "array_value": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "int_value": 0,
+  "name": "symbols",
+  "string_value": ""
+ },
+ "symbols_score": {
+  "array_value": [
+   [
+    90,
+    1
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    92,
+    1
+   ],
+   [
+    94,
+    1
+   ],
+   [
+    95,
+    1
+   ]
+  ],
+  "int_value": 0,
+  "name": "symbols_score",
+  "string_value": ""
+ },
+ "trigger_free_min_scatter_count": {
+  "array_value": [],
+  "int_value": 3,
+  "name": "trigger_free_min_scatter_count",
+  "string_value": ""
+ },
+ "wild": {
+  "array_value": [
+   92
+  ],
+  "int_value": 0,
+  "name": "wild",
+  "string_value": ""
+ }
+}

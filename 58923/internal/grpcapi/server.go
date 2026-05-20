@@ -23,10 +23,11 @@ func NewTaskServer(svc *service.TaskService) *TaskServer {
 
 func (s *TaskServer) AddDelayTask(ctx context.Context, req *AddDelayTaskRequest) (*TaskResponse, error) {
 	taskReq := &service.AddDelayTaskRequest{
-		Name:     req.Name,
-		Payload:  req.Payload,
-		DelayMs:  req.DelayMs,
-		MaxRetry: int(req.MaxRetry),
+		Name:      req.Name,
+		Payload:   req.Payload,
+		DelayMs:   req.DelayMs,
+		MaxRetry:  int(req.MaxRetry),
+		DependsOn: req.DependsOn,
 	}
 	task, err := s.svc.AddDelayTask(taskReq)
 	if err != nil {
@@ -37,10 +38,11 @@ func (s *TaskServer) AddDelayTask(ctx context.Context, req *AddDelayTaskRequest)
 
 func (s *TaskServer) AddCronTask(ctx context.Context, req *AddCronTaskRequest) (*TaskResponse, error) {
 	taskReq := &service.AddCronTaskRequest{
-		Name:     req.Name,
-		Payload:  req.Payload,
-		CronExpr: req.CronExpr,
-		MaxRetry: int(req.MaxRetry),
+		Name:      req.Name,
+		Payload:   req.Payload,
+		CronExpr:  req.CronExpr,
+		MaxRetry:  int(req.MaxRetry),
+		DependsOn: req.DependsOn,
 	}
 	task, err := s.svc.AddCronTask(taskReq)
 	if err != nil {
@@ -51,9 +53,10 @@ func (s *TaskServer) AddCronTask(ctx context.Context, req *AddCronTaskRequest) (
 
 func (s *TaskServer) AddOneTimeTask(ctx context.Context, req *AddOneTimeTaskRequest) (*TaskResponse, error) {
 	taskReq := &service.AddOneTimeTaskRequest{
-		Name:     req.Name,
-		Payload:  req.Payload,
-		MaxRetry: int(req.MaxRetry),
+		Name:      req.Name,
+		Payload:   req.Payload,
+		MaxRetry:  int(req.MaxRetry),
+		DependsOn: req.DependsOn,
 	}
 	task, err := s.svc.AddOneTimeTask(taskReq)
 	if err != nil {
@@ -119,6 +122,7 @@ func taskToProto(task *models.Task) *TaskResponse {
 			Type:        string(task.Type),
 			Name:        task.Name,
 			Payload:     task.Payload,
+			DependsOn:   task.DependsOn,
 			CronExpr:    task.CronExpr,
 			DelayMs:     task.DelayMs,
 			Status:      string(task.Status),

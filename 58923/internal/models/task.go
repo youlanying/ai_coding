@@ -15,6 +15,7 @@ const (
 type TaskStatus string
 
 const (
+	TaskStatusWaiting   TaskStatus = "waiting"
 	TaskStatusPending   TaskStatus = "pending"
 	TaskStatusRunning   TaskStatus = "running"
 	TaskStatusSuccess   TaskStatus = "success"
@@ -27,6 +28,7 @@ type Task struct {
 	Type        TaskType          `json:"type"`
 	Name        string            `json:"name"`
 	Payload     map[string]string `json:"payload"`
+	DependsOn   []string          `json:"depends_on,omitempty"`
 	CronExpr    string            `json:"cron_expr,omitempty"`
 	DelayMs     int64             `json:"delay_ms,omitempty"`
 	Status      TaskStatus        `json:"status"`

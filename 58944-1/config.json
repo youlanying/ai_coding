@@ -1,0 +1,5 @@
+{
+  "input_path": "example/1112_90.xlsx",
+  "output_dir": "example",
+  "file_prefix": "1112_90"
+}

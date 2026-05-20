@@ -124,3 +124,78 @@ func (s *TaskStore) GetLatestResult(taskID string) (*models.TaskResult, bool) {
 	}
 	return results[len(results)-1], true
 }
+
+func (s *TaskStore) GetWaitingTasks() []*models.Task {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	var tasks []*models.Task
+	for _, t := range s.tasks {
+		if t.Status == models.TaskStatusWaiting {
+			tasks = append(tasks, t)
+		}
+	}
+	return tasks
+}
+
+func (s *TaskStore) GetDependents(taskID string) []*models.Task {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	var dependents []*models.Task
+	for _, t := range s.tasks {
+		if t.Status == models.TaskStatusWaiting {
+			for _, dep := range t.DependsOn {
+				if dep == taskID {
+					dependents = append(dependents, t)
+					break
+				}
+			}
+		}
+	}
+	return dependents
+}
+
+func (s *TaskStore) CheckDependencies(taskID string) bool {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	task, exists := s.tasks[taskID]
+	if !exists {
+		return false
+	}
+	if len(task.DependsOn) == 0 {
+		return true
+	}
+	for _, depID := range task.DependsOn {
+		depTask, exists := s.tasks[depID]
+		if !exists {
+			return false
+		}
+		if depTask.Status != models.TaskStatusSuccess {
+			return false
+		}
+	}
+	return true
+}
+
+func (s *TaskStore) LoadAllTasks() ([]*models.Task, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	tasks := make([]*models.Task, 0, len(s.tasks))
+	for _, t := range s.tasks {
+		tasks = append(tasks, t)
+	}
+	return tasks, nil
+}
+
+func (s *TaskStore) LoadAllResults() ([]*models.TaskResult, error) {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	var results []*models.TaskResult
+	for _, rs := range s.results {
+		results = append(results, rs...)
+	}
+	return results, nil
+}
+
+func (s *TaskStore) Close() error {
+	return nil
+}

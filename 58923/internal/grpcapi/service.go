@@ -11,6 +11,7 @@ type Task struct {
 	Type        string            `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
 	Name        string            `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
 	Payload     map[string]string `protobuf:"bytes,4,rep,name=payload,proto3" json:"payload,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	DependsOn   []string          `protobuf:"bytes,16,rep,name=depends_on,json=dependsOn,proto3" json:"depends_on,omitempty"`
 	CronExpr    string            `protobuf:"bytes,5,opt,name=cron_expr,json=cronExpr,proto3" json:"cron_expr,omitempty"`
 	DelayMs     int64             `protobuf:"varint,6,opt,name=delay_ms,json=delayMs,proto3" json:"delay_ms,omitempty"`
 	Status      string            `protobuf:"bytes,7,opt,name=status,proto3" json:"status,omitempty"`
@@ -42,23 +43,26 @@ type WorkerPoolStats struct {
 }
 
 type AddDelayTaskRequest struct {
-	Name     string            `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Payload  map[string]string `protobuf:"bytes,2,rep,name=payload,proto3" json:"payload,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	DelayMs  int64             `protobuf:"varint,3,opt,name=delay_ms,json=delayMs,proto3" json:"delay_ms,omitempty"`
-	MaxRetry int32             `protobuf:"varint,4,opt,name=max_retry,json=maxRetry,proto3" json:"max_retry,omitempty"`
+	Name      string            `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Payload   map[string]string `protobuf:"bytes,2,rep,name=payload,proto3" json:"payload,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	DelayMs   int64             `protobuf:"varint,3,opt,name=delay_ms,json=delayMs,proto3" json:"delay_ms,omitempty"`
+	MaxRetry  int32             `protobuf:"varint,4,opt,name=max_retry,json=maxRetry,proto3" json:"max_retry,omitempty"`
+	DependsOn []string          `protobuf:"bytes,5,rep,name=depends_on,json=dependsOn,proto3" json:"depends_on,omitempty"`
 }
 
 type AddCronTaskRequest struct {
-	Name     string            `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Payload  map[string]string `protobuf:"bytes,2,rep,name=payload,proto3" json:"payload,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	CronExpr string            `protobuf:"bytes,3,opt,name=cron_expr,json=cronExpr,proto3" json:"cron_expr,omitempty"`
-	MaxRetry int32             `protobuf:"varint,4,opt,name=max_retry,json=maxRetry,proto3" json:"max_retry,omitempty"`
+	Name      string            `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Payload   map[string]string `protobuf:"bytes,2,rep,name=payload,proto3" json:"payload,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	CronExpr  string            `protobuf:"bytes,3,opt,name=cron_expr,json=cronExpr,proto3" json:"cron_expr,omitempty"`
+	MaxRetry  int32             `protobuf:"varint,4,opt,name=max_retry,json=maxRetry,proto3" json:"max_retry,omitempty"`
+	DependsOn []string          `protobuf:"bytes,5,rep,name=depends_on,json=dependsOn,proto3" json:"depends_on,omitempty"`
 }
 
 type AddOneTimeTaskRequest struct {
-	Name     string            `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Payload  map[string]string `protobuf:"bytes,2,rep,name=payload,proto3" json:"payload,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	MaxRetry int32             `protobuf:"varint,3,opt,name=max_retry,json=maxRetry,proto3" json:"max_retry,omitempty"`
+	Name      string            `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Payload   map[string]string `protobuf:"bytes,2,rep,name=payload,proto3" json:"payload,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	MaxRetry  int32             `protobuf:"varint,3,opt,name=max_retry,json=maxRetry,proto3" json:"max_retry,omitempty"`
+	DependsOn []string          `protobuf:"bytes,4,rep,name=depends_on,json=dependsOn,proto3" json:"depends_on,omitempty"`
 }
 
 type TaskResponse struct {

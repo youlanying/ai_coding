@@ -14,19 +14,20 @@ import (
 type TaskExecutor func(ctx context.Context, payload map[string]string) (string, error)
 
 type WorkerPool struct {
-	store        *store.TaskStore
-	executor     TaskExecutor
-	taskQueue    chan *models.Task
-	workers      map[int]context.CancelFunc
-	workerMu     sync.Mutex
-	workerCount  int32
-	activeCount  int32
-	nextWorkerID int
+	store          store.Store
+	executor       TaskExecutor
+	taskQueue      chan *models.Task
+	workers        map[int]context.CancelFunc
+	workerMu       sync.Mutex
+	workerCount    int32
+	activeCount    int32
+	nextWorkerID   int
+	OnTaskComplete func(taskID string)
 }
 
-func NewWorkerPool(store *store.TaskStore, executor TaskExecutor, initialWorkers int) *WorkerPool {
+func NewWorkerPool(st store.Store, executor TaskExecutor, initialWorkers int) *WorkerPool {
 	pool := &WorkerPool{
-		store:       store,
+		store:       st,
 		executor:    executor,
 		taskQueue:   make(chan *models.Task, 10000),
 		workers:     make(map[int]context.CancelFunc),
@@ -122,12 +123,18 @@ func (p *WorkerPool) processTask(task *models.Task) {
 			}(task, delay)
 		} else {
 			p.store.UpdateTaskStatus(task.ID, models.TaskStatusFailed)
+			if p.OnTaskComplete != nil {
+				p.OnTaskComplete(task.ID)
+			}
 		}
 	} else {
 		taskResult.Status = models.TaskStatusSuccess
 		taskResult.Result = result
 		p.store.UpdateTaskResult(task.ID, result, "")
 		p.store.UpdateTaskStatus(task.ID, models.TaskStatusSuccess)
+		if p.OnTaskComplete != nil {
+			p.OnTaskComplete(task.ID)
+		}
 	}
 
 	p.store.SaveResult(taskResult)
