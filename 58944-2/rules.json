@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "x-frame-options",
+          "operation": "remove"
+        },
+        {
+          "header": "content-security-policy",
+          "operation": "remove"
+        },
+        {
+          "header": "content-security-policy-report-only",
+          "operation": "remove"
+        },
+        {
+          "header": "frame-options",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "resourceTypes": ["main_frame", "sub_frame"],
+      "requestDomains": [
+        "doubao.com",
+        "www.doubao.com",
+        "deepseek.com",
+        "chat.deepseek.com",
+        "deepseek.cn",
+        "www.deepseek.cn",
+        "tongyi.aliyun.com",
+        "qianwen.aliyun.com",
+        "kimi.moonshot.cn",
+        "www.kimi.moonshot.cn",
+        "moonshot.cn",
+        "www.moonshot.cn"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "set-cookie",
+          "operation": "append",
+          "value": "; SameSite=None; Secure"
+        }
+      ]
+    },
+    "condition": {
+      "resourceTypes": ["main_frame", "sub_frame"],
+      "requestDomains": [
+        "doubao.com",
+        "www.doubao.com",
+        "deepseek.com",
+        "chat.deepseek.com",
+        "deepseek.cn",
+        "www.deepseek.cn",
+        "tongyi.aliyun.com",
+        "qianwen.aliyun.com",
+        "kimi.moonshot.cn",
+        "www.kimi.moonshot.cn",
+        "moonshot.cn",
+        "www.moonshot.cn"
+      ]
+    }
+  }
+]

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI多助手同步工具</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>AI多助手同步工具</h1>
+      <div class="header-actions">
+        <button id="openNewTab" class="btn btn-primary">↗ 全屏模式</button>
+        <button id="refreshAll" class="btn">🔄 刷新全部</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="iframe-container">
+        <div class="iframe-wrapper">
+          <div class="iframe-header">
+            <span class="iframe-title">豆包</span>
+            <button class="iframe-refresh" data-site="doubao" title="刷新">🔄</button>
+          </div>
+          <iframe id="iframe-doubao" src="https://www.doubao.com" class="ai-iframe"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+          <div class="iframe-header">
+            <span class="iframe-title">DeepSeek</span>
+            <button class="iframe-refresh" data-site="deepseek" title="刷新">🔄</button>
+          </div>
+          <iframe id="iframe-deepseek" src="https://chat.deepseek.com" class="ai-iframe"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+          <div class="iframe-header">
+            <span class="iframe-title">千问</span>
+            <button class="iframe-refresh" data-site="qianwen" title="刷新">🔄</button>
+          </div>
+          <iframe id="iframe-qianwen" src="https://tongyi.aliyun.com/qianwen/" class="ai-iframe"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+          <div class="iframe-header">
+            <span class="iframe-title">Kimi</span>
+            <button class="iframe-refresh" data-site="kimi" title="刷新">🔄</button>
+          </div>
+          <iframe id="iframe-kimi" src="https://kimi.moonshot.cn" class="ai-iframe"></iframe>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <div class="input-header">
+          <span class="input-title">📝 输入内容（实时同步到所有AI助手）</span>
+          <div class="input-actions">
+            <label class="toggle-label">
+              <input type="checkbox" id="autoSync" checked>
+              <span>实时同步</span>
+            </label>
+            <button id="clearBtn" class="btn btn-danger">清空</button>
+            <button id="syncBtn" class="btn btn-success">📤 手动同步</button>
+            <button id="sendBtn" class="btn btn-primary">🚀 一键发送</button>
+          </div>
+        </div>
+        <div id="richEditor" class="rich-editor" contenteditable="true" 
+             placeholder="在此输入您的问题，内容将实时同步到四个AI助手的输入框..."></div>
+        <div class="input-footer">
+          <span id="charCount">字数: 0</span>
+          <span id="syncStatus">等待输入...</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

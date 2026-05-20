@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "AI多助手同步工具",
+  "version": "1.0.0",
+  "description": "同时打开豆包、DeepSeek、千问、Kimi，输入内容一键同步到四个AI助手",
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation",
+    "declarativeNetRequest",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.doubao.com/*",
+    "*://*.deepseek.com/*",
+    "*://*.deepseek.cn/*",
+    "*://*.tongyi.aliyun.com/*",
+    "*://*.qianwen.aliyun.com/*",
+    "*://*.kimi.moonshot.cn/*",
+    "*://*.moonshot.cn/*"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.doubao.com/*",
+        "*://*.deepseek.com/*",
+        "*://*.deepseek.cn/*",
+        "*://*.tongyi.aliyun.com/*",
+        "*://*.qianwen.aliyun.com/*",
+        "*://*.kimi.moonshot.cn/*",
+        "*://*.moonshot.cn/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
